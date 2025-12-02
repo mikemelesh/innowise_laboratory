@@ -65,9 +65,13 @@ INSERT INTO grades (student_id, subject, grade) VALUES
 (10, 'English', 88),
 (10, 'Science', 85);
 
+-- Index for grade in table grades
 CREATE INDEX IF NOT EXISTS grade_Idx ON grades (grade);
+-- Index for name in table students
 CREATE INDEX IF NOT EXISTS student_name_Idx ON students (name);
+-- Index for birth_year in table students
 CREATE INDEX IF NOT EXISTS student_birth_year_Idx ON students (birth_year);
+-- Index for student_id in table grades
 CREATE INDEX IF NOT EXISTS grade_student_id_Idx ON grades (student_id);
             
 -- Find all grades for a specific student
